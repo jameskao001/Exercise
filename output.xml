@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150918 00:47:14.189" generator="Robot 2.8.1 (Python 2.7.10 on win32)">
+<suite source="E:\Ruckus\workspace\Exercise\Exercise_for_Ruckus.txt" id="s1" name="Exercise for Ruckus">
+<kw type="setup" name="Go to homepage">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150918 00:47:15.917" level="INFO">Opening browser 'firefox' to base url 'https://www.google.com'</msg>
+<status status="PASS" endtime="20150918 00:47:28.267" starttime="20150918 00:47:15.917"></status>
+</kw>
+<status status="PASS" endtime="20150918 00:47:28.267" starttime="20150918 00:47:15.916"></status>
+</kw>
+<test id="s1-t1" name="Google Ruckus Wireless">
+<kw type="kw" name="Google and check result">
+<doc></doc>
+<arguments>
+<arg>Ruckus Wireless</arg>
+<arg>www.ruckuswireless.com</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=lst-ib</arg>
+<arg>${searchkey}</arg>
+</arguments>
+<msg timestamp="20150918 00:47:28.270" level="INFO">Typing text 'Ruckus Wireless' into text field 'id=lst-ib'</msg>
+<status status="PASS" endtime="20150918 00:47:28.814" starttime="20150918 00:47:28.269"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Google 搜尋</arg>
+</arguments>
+<msg timestamp="20150918 00:47:28.835" level="INFO">Clicking button 'Google 搜尋'.</msg>
+<status status="PASS" endtime="20150918 00:47:29.013" starttime="20150918 00:47:28.814"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" endtime="20150918 00:47:30.321" starttime="20150918 00:47:29.014"></status>
+</kw>
+<status status="PASS" endtime="20150918 00:47:30.321" starttime="20150918 00:47:28.269"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150918 00:47:30.323" critical="yes" starttime="20150918 00:47:28.267"></status>
+</test>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150918 00:47:30.507" starttime="20150918 00:47:30.333"></status>
+</kw>
+<doc>A test case to search "Ruckus Wireless".</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150918 00:47:30.507" starttime="20150918 00:47:14.190"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Exercise for Ruckus">Exercise for Ruckus</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

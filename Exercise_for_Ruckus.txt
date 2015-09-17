@@ -1,0 +1,23 @@
+*** Settings ***
+Documentation     A test case to search "Ruckus Wireless".
+Library  Selenium2Library
+Suite Setup	 Go to homepage
+Suite Teardown  Close All Browsers
+
+*** Variable ***
+${HOMEPAGE}  https://www.google.com
+${BROWSER}	firefox
+
+*** Test Cases ***  
+Google Ruckus Wireless
+	Google and check result  Ruckus Wireless  www.ruckuswireless.com
+
+*** Keywords ***
+Google and check result
+  [Arguments]   ${searchkey}   ${result}
+  Input Text	id=lst-ib	${searchkey}
+  Click Button	Google 搜尋
+  Wait Until Page Contains	${result}
+  
+Go to homepage
+	Open Browser	${HOMEPAGE} 	${BROWSER}	
